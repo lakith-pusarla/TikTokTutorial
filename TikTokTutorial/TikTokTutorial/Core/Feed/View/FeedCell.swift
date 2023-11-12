@@ -11,33 +11,30 @@ import AVKit
 
 struct FeedCell: View {
     let post: Post
+    var player: AVPlayer
+    
+    init(post: Post){
+        self.post = post
+        self.player = AVPlayer(url: URL(string: post.videoURL)!)
+    }
     var body: some View {
         ZStack{
-            VideoPlayer(player: AVPlayer(url: URL(string: post.videoURL)!))
+            CustomVideoPlayer(player: player)
                 .containerRelativeFrame([.horizontal, .vertical])
-////            .overlay{
-////                Text("Post ID: \(post)")
-////                    .foregroundStyle(.white)
-////            }
+
             VStack{
                 Spacer()
                 
                 HStack(alignment: .bottom){
                     VStack(alignment: .leading) {
-                        
                         Text("Lakith Pusarla")
-                        
                             .fontWeight(.semibold)
-                        
                         Text("Jai Balayya is my anthem")
                     }
                     .font(.subheadline)
                     .foregroundStyle(.white)
-                    
                     Spacer()
-                    
                     VStack(spacing: 25){
-                        
                         Circle()
                             .frame(width: 45, height: 45)
                             .foregroundStyle(.gray)
@@ -55,10 +52,8 @@ struct FeedCell: View {
                                     .font(.caption)
                                     .foregroundStyle(.white)
                                     .bold()
-                                
                             }
                         }
-                        
                         Button{
                             // Action for button
                         } label: {
@@ -74,7 +69,6 @@ struct FeedCell: View {
                                     .bold()
                             }
                         }
-                        
                         Button{
                             // Action for button
                         } label: {
@@ -95,10 +89,13 @@ struct FeedCell: View {
                     }
                 }
                 .padding(.bottom, 84)
-                
             }
             .padding()
-            
+        }
+        .onAppear{
+            print("DEBUG: Post ID: \(post.id)")
+            // Issue with scroll view playing multiple videos at the same instance
+//            player.play()
         }
     }
 }

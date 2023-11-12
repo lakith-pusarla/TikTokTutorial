@@ -24,6 +24,7 @@
 		A8FB1A292B0154EB00C47E09 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A282B0154EB00C47E09 /* UserStatView.swift */; };
 		A8FB1A2B2B01620600C47E09 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A2A2B01620600C47E09 /* Post.swift */; };
 		A8FB1A302B01626200C47E09 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A2F2B01626200C47E09 /* FeedViewModel.swift */; };
+		A8FB1A322B0181E700C47E09 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A312B0181E700C47E09 /* CustomVideoPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A8FB1A282B0154EB00C47E09 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		A8FB1A2A2B01620600C47E09 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A8FB1A2F2B01626200C47E09 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		A8FB1A312B0181E700C47E09 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 				A8FB1A202B01520800C47E09 /* ProfileHeaderView.swift */,
 				A8FB1A222B01521200C47E09 /* PostGridView.swift */,
 				A8FB1A282B0154EB00C47E09 /* UserStatView.swift */,
+				A8FB1A312B0181E700C47E09 /* CustomVideoPlayer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8FB1A132B007E4400C47E09 /* FeedView.swift in Sources */,
+				A8FB1A322B0181E700C47E09 /* CustomVideoPlayer.swift in Sources */,
 				A8FB1A212B01520800C47E09 /* ProfileHeaderView.swift in Sources */,
 				A8FB1A152B009DFC00C47E09 /* FeedCell.swift in Sources */,
 				A8FB1A292B0154EB00C47E09 /* UserStatView.swift in Sources */,
