@@ -11,14 +11,15 @@ struct NotificationsView: View {
     var body: some View {
         NavigationStack{
             ScrollView{
-                LazyVStack(spacing: 18){
-                    ForEach(0..<10){notification in
+                LazyVStack(spacing: 28){
+                    ForEach(0..<20){notification in
                             NotificationsCell()
                     }
                 }
             }
             .navigationTitle("Notifications")
             .navigationBarTitleDisplayMode(.inline)
+            .padding(.top)
         }
     }
 }

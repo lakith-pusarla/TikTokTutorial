@@ -14,7 +14,7 @@ struct NotificationsCell: View {
         HStack{
             Image(systemName: "person.circle.fill")
                 .resizable()
-                .frame(width: 28, height: 28)
+                .frame(width: 32, height: 32)
                 .foregroundStyle(Color(.systemGray5))
             HStack{
                 // Concatenating text instead of different texts
@@ -31,7 +31,13 @@ struct NotificationsCell: View {
             }
             
             Spacer()
+            
+            Rectangle()
+                .frame(width: 35, height: 35)
+                .clipShape(RoundedRectangle(cornerRadius: 6))
+            
         }
+        .padding(.horizontal)
         
     }
 }
