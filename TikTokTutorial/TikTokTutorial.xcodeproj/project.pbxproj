@@ -14,6 +14,8 @@
 		A8FB1A112B0057DA00C47E09 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A102B0057DA00C47E09 /* MainTabView.swift */; };
 		A8FB1A132B007E4400C47E09 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A122B007E4400C47E09 /* FeedView.swift */; };
 		A8FB1A152B009DFC00C47E09 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A142B009DFC00C47E09 /* FeedCell.swift */; };
+		A8FB1A172B00C18E00C47E09 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A162B00C18E00C47E09 /* ExploreView.swift */; };
+		A8FB1A192B00C1AA00C47E09 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A182B00C1AA00C47E09 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A8FB1A102B0057DA00C47E09 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		A8FB1A122B007E4400C47E09 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		A8FB1A142B009DFC00C47E09 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		A8FB1A162B00C18E00C47E09 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		A8FB1A182B00C1AA00C47E09 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 		A8FB1A072B00570800C47E09 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				A8FB1A162B00C18E00C47E09 /* ExploreView.swift */,
+				A8FB1A182B00C1AA00C47E09 /* UserCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -280,7 +286,9 @@
 				A8FB1A152B009DFC00C47E09 /* FeedCell.swift in Sources */,
 				A8FB19F32B00550900C47E09 /* ContentView.swift in Sources */,
 				A8FB19F12B00550900C47E09 /* TikTokTutorialApp.swift in Sources */,
+				A8FB1A172B00C18E00C47E09 /* ExploreView.swift in Sources */,
 				A8FB1A112B0057DA00C47E09 /* MainTabView.swift in Sources */,
+				A8FB1A192B00C1AA00C47E09 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
