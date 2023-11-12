@@ -23,7 +23,7 @@ struct ProfileHeaderView: View {
             }
             
             // Stats
-            HStack(spacing: 10){
+            HStack(spacing: 16){
                 UserStatView(value: 5, title: "Posts")
                 UserStatView(value: 2, title: "Followers")
                 UserStatView(value: 15, title: "Following")
@@ -49,6 +49,23 @@ struct ProfileHeaderView: View {
 //                }
 //                .frame(width: 80, alignment: .center)
             }
+            
+            //Action Button
+            Button{
+                
+            } label: {
+                Text("Edit profile")
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .frame(width: 360, height: 32)
+                    .foregroundStyle(.black)
+                    .background(Color(.systemGray6))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+            }
+            
+            Divider()
+            
+            
         }
     }
 }

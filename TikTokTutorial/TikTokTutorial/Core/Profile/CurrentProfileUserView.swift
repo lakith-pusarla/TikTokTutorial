@@ -13,13 +13,19 @@ struct CurrentProfileUserView: View {
             ScrollView{
                 VStack(spacing: 2){
                     // Profile header
-                    
+                    ProfileHeaderView()
                     
                     
                     // Post grid view
+                    PostGridView()
                 }
+                .padding(.top)
             }
-        }    }
+            .navigationTitle("Profile")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+        
+    }
 }
 
 #Preview {
