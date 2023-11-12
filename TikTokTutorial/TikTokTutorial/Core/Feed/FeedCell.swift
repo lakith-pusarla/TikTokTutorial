@@ -21,7 +21,7 @@ struct FeedCell: View {
             VStack{
                 Spacer()
                 
-                HStack{
+                HStack(alignment: .bottom){
                     VStack(alignment: .leading) {
                         
                         Text("Lakith Pusarla")
@@ -35,23 +35,43 @@ struct FeedCell: View {
                     
                     Spacer()
                     
-                    VStack{
+                    VStack(spacing: 25){
+                        
+                        Circle()
+                            .frame(width: 45, height: 45)
+                            .foregroundStyle(.gray)
+                        
                         Button{
                             // Action for button
                         } label: {
-                            Image(systemName: "heart.fill")
-                                .resizable()
-                                .frame(width: 40, height: 40)
+                            VStack {
+                                Image(systemName: "heart.fill")
+                                    .resizable()
+                                    .frame(width: 28, height: 25)
                                 .foregroundStyle(.white)
+                                
+                                Text("41")
+                                    .font(.caption)
+                                    .foregroundStyle(.white)
+                                    .bold()
+                                
+                            }
                         }
                         
                         Button{
                             // Action for button
                         } label: {
-                            Image(systemName: "ellipses.bubble.fill")
-                                .resizable()
-                                .frame(width: 40, height: 40)
-                                .foregroundStyle(.white)
+                            VStack {
+                                Image(systemName: "ellipses.bubble.fill")
+                                    .resizable()
+                                    .frame(width: 28, height: 25)
+                                    .foregroundStyle(.white)
+                                
+                                Text("1718")
+                                    .font(.caption)
+                                    .foregroundStyle(.white)
+                                    .bold()
+                            }
                         }
                         
                         Button{
@@ -59,7 +79,7 @@ struct FeedCell: View {
                         } label: {
                             Image(systemName: "bookmark.fill")
                                 .resizable()
-                                .frame(width: 40, height: 40)
+                                .frame(width: 28, height: 25)
                                 .foregroundStyle(.white)
                         }
                         
@@ -68,11 +88,12 @@ struct FeedCell: View {
                         } label: {
                             Image(systemName: "arrowshape.turn.up.right.fill")
                                 .resizable()
-                                .frame(width: 40, height: 40)
+                                .frame(width: 30, height: 25)
                                 .foregroundStyle(.white)
                         }
                     }
                 }
+                .padding(.bottom, 84)
                 
             }
             .padding()
