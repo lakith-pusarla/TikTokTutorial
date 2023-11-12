@@ -21,6 +21,7 @@ struct ExploreView: View {
             
             .navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.inline)
+            .padding(.top)
         }
     }
 }
