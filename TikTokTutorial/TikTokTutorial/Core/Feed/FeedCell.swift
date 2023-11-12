@@ -40,29 +40,42 @@ struct FeedCell: View {
                             // Action for button
                         } label: {
                             Image(systemName: "heart.fill")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(.white)
                         }
                         
                         Button{
                             // Action for button
                         } label: {
                             Image(systemName: "ellipses.bubble.fill")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(.white)
                         }
                         
                         Button{
                             // Action for button
                         } label: {
                             Image(systemName: "bookmark.fill")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(.white)
                         }
                         
                         Button{
                             // Action for button
                         } label: {
                             Image(systemName: "arrowshape.turn.up.right.fill")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(.white)
                         }
                     }
                 }
                 
             }
+            .padding()
             
         }
     }
