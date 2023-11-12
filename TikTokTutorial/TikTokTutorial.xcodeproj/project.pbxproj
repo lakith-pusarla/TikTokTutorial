@@ -12,6 +12,8 @@
 		A8FB19F52B00550A00C47E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FB19F42B00550A00C47E09 /* Assets.xcassets */; };
 		A8FB19F92B00550A00C47E09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FB19F82B00550A00C47E09 /* Preview Assets.xcassets */; };
 		A8FB1A112B0057DA00C47E09 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A102B0057DA00C47E09 /* MainTabView.swift */; };
+		A8FB1A132B007E4400C47E09 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A122B007E4400C47E09 /* FeedView.swift */; };
+		A8FB1A152B009DFC00C47E09 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A142B009DFC00C47E09 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A8FB19F62B00550A00C47E09 /* TikTokTutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TikTokTutorial.entitlements; sourceTree = "<group>"; };
 		A8FB19F82B00550A00C47E09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A8FB1A102B0057DA00C47E09 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		A8FB1A122B007E4400C47E09 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		A8FB1A142B009DFC00C47E09 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 		A8FB1A0B2B00571400C47E09 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				A8FB1A122B007E4400C47E09 /* FeedView.swift */,
+				A8FB1A142B009DFC00C47E09 /* FeedCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -270,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8FB1A132B007E4400C47E09 /* FeedView.swift in Sources */,
+				A8FB1A152B009DFC00C47E09 /* FeedCell.swift in Sources */,
 				A8FB19F32B00550900C47E09 /* ContentView.swift in Sources */,
 				A8FB19F12B00550900C47E09 /* TikTokTutorialApp.swift in Sources */,
 				A8FB1A112B0057DA00C47E09 /* MainTabView.swift in Sources */,
