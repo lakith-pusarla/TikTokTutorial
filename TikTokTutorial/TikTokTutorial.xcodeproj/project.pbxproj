@@ -21,6 +21,7 @@
 		A8FB1A212B01520800C47E09 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A202B01520800C47E09 /* ProfileHeaderView.swift */; };
 		A8FB1A232B01521200C47E09 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A222B01521200C47E09 /* PostGridView.swift */; };
 		A8FB1A252B01527100C47E09 /* CurrentProfileUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A242B01527100C47E09 /* CurrentProfileUserView.swift */; };
+		A8FB1A292B0154EB00C47E09 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB1A282B0154EB00C47E09 /* UserStatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		A8FB1A202B01520800C47E09 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		A8FB1A222B01521200C47E09 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		A8FB1A242B01527100C47E09 /* CurrentProfileUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProfileUserView.swift; sourceTree = "<group>"; };
+		A8FB1A282B0154EB00C47E09 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +183,8 @@
 		A8FB1A092B00570E00C47E09 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				A8FB1A202B01520800C47E09 /* ProfileHeaderView.swift */,
-				A8FB1A222B01521200C47E09 /* PostGridView.swift */,
+				A8FB1A272B0154CB00C47E09 /* View */,
+				A8FB1A262B0154BD00C47E09 /* Components */,
 				A8FB1A242B01527100C47E09 /* CurrentProfileUserView.swift */,
 			);
 			path = Profile;
@@ -225,6 +227,23 @@
 			children = (
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		A8FB1A262B0154BD00C47E09 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A8FB1A202B01520800C47E09 /* ProfileHeaderView.swift */,
+				A8FB1A222B01521200C47E09 /* PostGridView.swift */,
+				A8FB1A282B0154EB00C47E09 /* UserStatView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A8FB1A272B0154CB00C47E09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +319,7 @@
 				A8FB1A132B007E4400C47E09 /* FeedView.swift in Sources */,
 				A8FB1A212B01520800C47E09 /* ProfileHeaderView.swift in Sources */,
 				A8FB1A152B009DFC00C47E09 /* FeedCell.swift in Sources */,
+				A8FB1A292B0154EB00C47E09 /* UserStatView.swift in Sources */,
 				A8FB19F32B00550900C47E09 /* ContentView.swift in Sources */,
 				A8FB19F12B00550900C47E09 /* TikTokTutorialApp.swift in Sources */,
 				A8FB1A172B00C18E00C47E09 /* ExploreView.swift in Sources */,
