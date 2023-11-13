@@ -20,6 +20,8 @@ struct CustomVideoPlayer: UIViewControllerRepresentable{
         controller.showsPlaybackControls = false
         controller.allowsPictureInPicturePlayback = true
         controller.videoGravity = .resizeAspectFill // Full screen video
+        controller.view.isUserInteractionEnabled = false
+        
         return controller
     }
     

@@ -13,9 +13,10 @@ struct FeedCell: View {
     let post: Post
     var player: AVPlayer
     
-    init(post: Post){
+    init(post: Post, player: AVPlayer){
         self.post = post
-        self.player = AVPlayer(url: URL(string: post.videoURL)!)
+        self.player = player
+//        self.player = AVPlayer(url: URL(string: post.videoURL)!)
     }
     var body: some View {
         ZStack{
@@ -101,5 +102,5 @@ struct FeedCell: View {
 }
 
 #Preview {
-    FeedCell(post: Post(id: NSUUID().uuidString, videoURL: ""))
+    FeedCell(post: Post(id: NSUUID().uuidString, videoURL: ""), player: AVPlayer())
 }
