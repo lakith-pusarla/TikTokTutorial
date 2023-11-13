@@ -12,6 +12,14 @@ import AVKit
 struct FeedCell: View {
     let post: Post
     var player: AVPlayer
+    @State private var isMuted = false
+    // Experiment
+    @State private var showIcon = false
+    @State private var iconDisplayTimer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+
+
+    
+
     
     init(post: Post, player: AVPlayer){
         self.post = post
@@ -19,6 +27,7 @@ struct FeedCell: View {
 //        self.player = AVPlayer(url: URL(string: post.videoURL)!)
     }
     var body: some View {
+        
         ZStack{
             CustomVideoPlayer(player: player)
                 .containerRelativeFrame([.horizontal, .vertical])
@@ -92,14 +101,51 @@ struct FeedCell: View {
                 .padding(.bottom, 84)
             }
             .padding()
+            // Experiment
+            if showIcon{
+                Image(systemName: isMuted ? "speaker.slash.fill" : "speaker.fill")
+                    .resizable()
+                    .frame(width: 28, height: 28)
+                    .foregroundStyle(.white)
+                    .transition(.opacity)
+                    .animation(.easeInOut(duration: 0.2), value: showIcon)
+                    .onAppear{
+                        showIcon = false
+                    }
+                
+            }
         }
-        .onAppear{
-            print("DEBUG: Post ID: \(post.id)")
-            // Issue with scroll view playing multiple videos at the same instance
-//            player.play()
+//        .onTapGesture {
+//            switch player.timeControlStatus {
+//            case .paused:
+//                player.isMuted = true
+//            case .waitingToPlayAtSpecifiedRate:
+//                break
+//            case .playing:
+//                player.isMuted = false
+//            @unknown default:
+//                break
+        .onTapGesture {
+            isMuted.toggle()
+            player.isMuted = isMuted
+            showIcon = true
+            
+//            switch isMuted {
+//            case true:
+//                isMuted = false
+//                player.isMuted = false
+//
+//
+//            case false:
+//                isMuted = true
+//                player.isMuted = true
         }
+                
     }
+       
 }
+
+
 
 #Preview {
     FeedCell(post: Post(id: NSUUID().uuidString, videoURL: ""), player: AVPlayer())
