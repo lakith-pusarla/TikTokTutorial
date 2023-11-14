@@ -6,37 +6,45 @@
 //
 
 import SwiftUI
+// Native SwiftUI video player
+import AVKit
 
 struct FeedCell: View {
-    let post: Int
+    let post: Post
+    var player: AVPlayer
+    @State private var isMuted: Bool
+    // Experiment
+    
+
+
+    
+
+    
+    init(post: Post, player: AVPlayer, isMuted: Bool){
+        self.post = post
+        self.player = player
+        self.isMuted = isMuted
+//        self.player = AVPlayer(url: URL(string: post.videoURL)!)
+    }
     var body: some View {
+        
         ZStack{
-            Rectangle()
-            .fill(.pink)
-            .containerRelativeFrame([.horizontal, .vertical])
-            .overlay{
-                Text("Post ID: \(post)")
-                    .foregroundStyle(.white)
-            }
+            CustomVideoPlayer(player: player)
+                .containerRelativeFrame([.horizontal, .vertical])
+
             VStack{
                 Spacer()
                 
                 HStack(alignment: .bottom){
                     VStack(alignment: .leading) {
-                        
                         Text("Lakith Pusarla")
-                        
                             .fontWeight(.semibold)
-                        
                         Text("Jai Balayya is my anthem")
                     }
                     .font(.subheadline)
                     .foregroundStyle(.white)
-                    
                     Spacer()
-                    
                     VStack(spacing: 25){
-                        
                         Circle()
                             .frame(width: 45, height: 45)
                             .foregroundStyle(.gray)
@@ -54,10 +62,8 @@ struct FeedCell: View {
                                     .font(.caption)
                                     .foregroundStyle(.white)
                                     .bold()
-                                
                             }
                         }
-                        
                         Button{
                             // Action for button
                         } label: {
@@ -73,7 +79,6 @@ struct FeedCell: View {
                                     .bold()
                             }
                         }
-                        
                         Button{
                             // Action for button
                         } label: {
@@ -94,14 +99,42 @@ struct FeedCell: View {
                     }
                 }
                 .padding(.bottom, 84)
-                
             }
             .padding()
+            // Experiment
             
         }
+//        .onTapGesture {
+//            switch player.timeControlStatus {
+//            case .paused:
+//                player.isMuted = true
+//            case .waitingToPlayAtSpecifiedRate:
+//                break
+//            case .playing:
+//                player.isMuted = false
+//            @unknown default:
+//                break
+        .onTapGesture {
+            isMuted.toggle()
+            player.isMuted = isMuted
+            
+//            switch isMuted {
+//            case true:
+//                isMuted = false
+//                player.isMuted = false
+//
+//
+//            case false:
+//                isMuted = true
+//                player.isMuted = true
+        }
+                
     }
+       
 }
 
+
+
 #Preview {
-    FeedCell(post: 2)
+    FeedCell(post: Post(id: NSUUID().uuidString, videoURL: ""), player: AVPlayer(), isMuted: true)
 }
