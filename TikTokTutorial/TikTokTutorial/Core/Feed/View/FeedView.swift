@@ -12,13 +12,14 @@ struct FeedView: View {
     @StateObject var viewModel = FeedViewModel()
     @State private var scrollPosition: String?
     @State private var player = AVPlayer()
-    
+    @State private var isMuted = false
     var body: some View {
         ScrollView {
             LazyVStack (spacing: 0){
                 ForEach(viewModel.posts){post in
-                        FeedCell(post: post, player: player)
+                    FeedCell(post: post, player: player, isMuted: isMuted)
                         .id(post.id)
+                        .onAppear{ playInitialVideoIfNecessary()}
                     
                 }
             }
@@ -32,6 +33,15 @@ struct FeedView: View {
 //            print("DEBUG: Scroll position is \(newValue)")
             playVideoOnChangeofScrollPosition(postID: newValue)
         }
+    }
+    
+    func playInitialVideoIfNecessary(){
+        guard
+            scrollPosition == "",
+            let post = viewModel.posts.first,
+            player.currentItem == nil else {return}
+        let item = AVPlayerItem(url: URL(string: post.videoURL)!)
+        player.replaceCurrentItem(with: item)
     }
     
     func playVideoOnChangeofScrollPosition(postID: String){

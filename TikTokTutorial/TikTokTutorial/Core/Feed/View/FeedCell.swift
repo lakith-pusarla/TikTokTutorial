@@ -12,18 +12,18 @@ import AVKit
 struct FeedCell: View {
     let post: Post
     var player: AVPlayer
-    @State private var isMuted = false
+    @State private var isMuted: Bool
     // Experiment
-    @State private var showIcon = false
-    @State private var iconDisplayTimer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    
 
 
     
 
     
-    init(post: Post, player: AVPlayer){
+    init(post: Post, player: AVPlayer, isMuted: Bool){
         self.post = post
         self.player = player
+        self.isMuted = isMuted
 //        self.player = AVPlayer(url: URL(string: post.videoURL)!)
     }
     var body: some View {
@@ -102,18 +102,7 @@ struct FeedCell: View {
             }
             .padding()
             // Experiment
-            if showIcon{
-                Image(systemName: isMuted ? "speaker.slash.fill" : "speaker.fill")
-                    .resizable()
-                    .frame(width: 28, height: 28)
-                    .foregroundStyle(.white)
-                    .transition(.opacity)
-                    .animation(.easeInOut(duration: 0.2), value: showIcon)
-                    .onAppear{
-                        showIcon = false
-                    }
-                
-            }
+            
         }
 //        .onTapGesture {
 //            switch player.timeControlStatus {
@@ -128,7 +117,6 @@ struct FeedCell: View {
         .onTapGesture {
             isMuted.toggle()
             player.isMuted = isMuted
-            showIcon = true
             
 //            switch isMuted {
 //            case true:
@@ -148,5 +136,5 @@ struct FeedCell: View {
 
 
 #Preview {
-    FeedCell(post: Post(id: NSUUID().uuidString, videoURL: ""), player: AVPlayer())
+    FeedCell(post: Post(id: NSUUID().uuidString, videoURL: ""), player: AVPlayer(), isMuted: true)
 }
