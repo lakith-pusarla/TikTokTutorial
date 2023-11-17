@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8DF62942B0734F500F7DF46 /* StandardTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF62932B0734F500F7DF46 /* StandardTextFieldModifier.swift */; };
+		A8E8A0F92B07316800EAB34D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E8A0F82B07316800EAB34D /* LoginView.swift */; };
+		A8E8A0FC2B07318B00EAB34D /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E8A0FB2B07318B00EAB34D /* RegistrationView.swift */; };
 		A8FB19F12B00550900C47E09 /* TikTokTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB19F02B00550900C47E09 /* TikTokTutorialApp.swift */; };
 		A8FB19F32B00550900C47E09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB19F22B00550900C47E09 /* ContentView.swift */; };
 		A8FB19F52B00550A00C47E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FB19F42B00550A00C47E09 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A8DF62932B0734F500F7DF46 /* StandardTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTextFieldModifier.swift; sourceTree = "<group>"; };
+		A8E8A0F82B07316800EAB34D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A8E8A0FB2B07318B00EAB34D /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		A8FB19ED2B00550900C47E09 /* TikTokTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FB19F02B00550900C47E09 /* TikTokTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokTutorialApp.swift; sourceTree = "<group>"; };
 		A8FB19F22B00550900C47E09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +79,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8E8A0F32B07312300EAB34D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8E8A0F82B07316800EAB34D /* LoginView.swift */,
+				A8E8A0FB2B07318B00EAB34D /* RegistrationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8E8A0F42B07312600EAB34D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A8E8A0F52B07312A00EAB34D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A8E8A0F62B07312D00EAB34D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A8E8A0F72B07314E00EAB34D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A8FB19E42B00550900C47E09 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				A8FB19F42B00550A00C47E09 /* Assets.xcassets */,
+				A8DF62932B0734F500F7DF46 /* StandardTextFieldModifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -246,6 +290,11 @@
 		A8FB1A0F2B00572400C47E09 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				A8E8A0F72B07314E00EAB34D /* ViewModel */,
+				A8E8A0F62B07312D00EAB34D /* Model */,
+				A8E8A0F52B07312A00EAB34D /* Protocols */,
+				A8E8A0F42B07312600EAB34D /* Service */,
+				A8E8A0F32B07312300EAB34D /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -376,13 +425,16 @@
 				A8FB1A132B007E4400C47E09 /* FeedView.swift in Sources */,
 				A8FB1A322B0181E700C47E09 /* CustomVideoPlayer.swift in Sources */,
 				A8FB1A212B01520800C47E09 /* ProfileHeaderView.swift in Sources */,
+				A8E8A0FC2B07318B00EAB34D /* RegistrationView.swift in Sources */,
 				A8FB1A152B009DFC00C47E09 /* FeedCell.swift in Sources */,
+				A8DF62942B0734F500F7DF46 /* StandardTextFieldModifier.swift in Sources */,
 				A8FB1A292B0154EB00C47E09 /* UserStatView.swift in Sources */,
 				A8FB19F32B00550900C47E09 /* ContentView.swift in Sources */,
 				A8FB1A302B01626200C47E09 /* FeedViewModel.swift in Sources */,
 				A8FB1A2B2B01620600C47E09 /* Post.swift in Sources */,
 				A8FB19F12B00550900C47E09 /* TikTokTutorialApp.swift in Sources */,
 				A8FB1A172B00C18E00C47E09 /* ExploreView.swift in Sources */,
+				A8E8A0F92B07316800EAB34D /* LoginView.swift in Sources */,
 				A8FB1A112B0057DA00C47E09 /* MainTabView.swift in Sources */,
 				A8FB1A232B01521200C47E09 /* PostGridView.swift in Sources */,
 				A8FB1A192B00C1AA00C47E09 /* UserCell.swift in Sources */,
