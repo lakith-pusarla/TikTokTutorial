@@ -13,6 +13,7 @@ struct LoginView: View {
     var body: some View {
         NavigationStack{
             VStack{
+                Spacer()
                 // Logo for app
                 Image("tiktok-app-icon")
                     .resizable()
