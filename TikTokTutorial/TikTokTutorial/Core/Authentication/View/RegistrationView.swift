@@ -72,6 +72,7 @@ struct RegistrationView: View {
                 .padding(.top, 5)
             }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
