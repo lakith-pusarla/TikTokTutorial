@@ -44,8 +44,16 @@ struct LoginView: View {
                 }
                 // login button
                 Button{
+                    // COmment the button
                     //print("DEBUG: LOGIN")
+                    
+                    // Add view model --- Did not work
                     //viewModel.login(withEmail: email, password: password)
+                    
+                    // Async function, needs to be wrapped in a task
+                    Task{await viewModel.login(withEmail:email, password:password)}
+                    
+                    
                 } label:{
                     Text("Login")
                         .font(.subheadline)

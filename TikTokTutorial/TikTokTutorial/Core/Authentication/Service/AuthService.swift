@@ -14,7 +14,7 @@ class AuthService{
     }
     
     func createUser(withEmail email: String, password: String, username: String, fullname: String) async throws{
-        
+        print("DEBUG: User Info email: \(email) \(username) \(fullname)")
     }
     
     func signout(){
