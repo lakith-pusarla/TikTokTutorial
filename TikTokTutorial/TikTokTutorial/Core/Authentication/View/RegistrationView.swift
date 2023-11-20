@@ -76,6 +76,22 @@ struct RegistrationView: View {
     }
 }
 
+extension RegistrationView: AuthenticationFormProtocol{
+    var formIsValid: Bool{
+        return !email.isEmpty
+        && isValidEmail(email)
+        && !password.isEmpty
+        && !fullname.isEmpty
+        && !username.isEmpty
+    }
+    
+    private func isValidEmail(_ email: String) -> Bool {
+            let emailRegex = #"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"#
+            let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+            return emailTest.evaluate(with: email)
+        }
+}
+
 #Preview {
     RegistrationView()
 }

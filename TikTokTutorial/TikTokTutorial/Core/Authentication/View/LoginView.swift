@@ -29,7 +29,6 @@ struct LoginView: View {
                     SecureField("Enter password", text: $password)
                         .modifier(StandardTextFieldModifier())
                 }
-                
                 // Forgot password link
                 NavigationLink{
                     Text("Forgot Password")
@@ -42,7 +41,6 @@ struct LoginView: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 // login button
-                
                 Button{
                     print("DEBUG: LOGIN")
                 } label:{
@@ -53,12 +51,12 @@ struct LoginView: View {
                     
                         .frame(width: 350, height: 44)
                         .background(.red)
-                        .clipShape(RoundedRectangle(cornerRadius: 40))
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
                 .padding(.vertical)
+                .disabled(!formIsValid)
+                .opacity(formIsValid ? 1 : 0.7)
                 Spacer()
-                
-                
                 // Signup link
                 Divider()
                 NavigationLink{
@@ -74,10 +72,24 @@ struct LoginView: View {
                     .padding(.vertical)
                     .padding(.top, 5)
                 }
-                
             }
         }
     }
+}
+
+// Authentication protocol to avoid unnecessary API calls
+extension LoginView: AuthenticationFormProtocol{
+    var formIsValid: Bool{
+        return !email.isEmpty
+        && isValidEmail(email)
+        && !password.isEmpty
+    }
+    
+    private func isValidEmail(_ email: String) -> Bool {
+            let emailRegex = #"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"#
+            let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+            return emailTest.evaluate(with: email)
+        }
 }
 
 #Preview {
