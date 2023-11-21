@@ -10,6 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @StateObject var viewModel = LoginViewModel(authService: AuthService())
+    
     var body: some View {
         NavigationStack{
             VStack{
@@ -42,7 +44,16 @@ struct LoginView: View {
                 }
                 // login button
                 Button{
-                    print("DEBUG: LOGIN")
+                    // COmment the button
+                    //print("DEBUG: LOGIN")
+                    
+                    // Add view model --- Did not work
+                    //viewModel.login(withEmail: email, password: password)
+                    
+                    // Async function, needs to be wrapped in a task
+                    Task{await viewModel.login(withEmail:email, password:password)}
+                    
+                    
                 } label:{
                     Text("Login")
                         .font(.subheadline)
