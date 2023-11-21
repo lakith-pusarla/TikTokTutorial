@@ -13,6 +13,7 @@ struct RegistrationView: View {
     @State private var fullname = ""
     @State private var username = ""
     @Environment(\.dismiss) var dismiss
+    @StateObject var viewModel =  RegistrationViewModel(authService: AuthService())
     
     var body: some View {
         VStack{
@@ -42,7 +43,17 @@ struct RegistrationView: View {
             }
             
             Button{
-                print("DEBUG: SIGN UP")
+                
+                // Comment print action
+               // print("DEBUG: SIGN UP")
+                
+                // Wrap the async function in a task
+                Task{
+                    await viewModel.createUser(withEmail:email,
+                                               password:password,
+                                               username:username,
+                                               fullname:fullname)
+                }
             } label:{
                 Text("Register")
                     .font(.subheadline)
@@ -53,9 +64,11 @@ struct RegistrationView: View {
                     .background(.red)
                     .clipShape(RoundedRectangle(cornerRadius: 40))
             }
+            
             .padding(.vertical)
-            .disabled(!formIsValid)
-            .opacity(formIsValid ? 1 : 0.7)
+
+//            .disabled(!formIsValid)
+//            .opacity(formIsValid ? 1 : 0.7)
             Spacer()
             
             Divider()
@@ -73,6 +86,7 @@ struct RegistrationView: View {
                 .padding(.vertical)
                 .padding(.top, 5)
             }
+            
         }
         .navigationBarBackButtonHidden()
     }
