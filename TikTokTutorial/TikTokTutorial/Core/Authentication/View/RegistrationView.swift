@@ -54,6 +54,8 @@ struct RegistrationView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 40))
             }
             .padding(.vertical)
+            .disabled(!formIsValid)
+            .opacity(formIsValid ? 1 : 0.7)
             Spacer()
             
             Divider()
