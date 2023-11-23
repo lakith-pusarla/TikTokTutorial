@@ -12,6 +12,11 @@
 		A8DF62982B0B243800F7DF46 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF62972B0B243700F7DF46 /* AuthService.swift */; };
 		A8DF629A2B0B264B00F7DF46 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF62992B0B264B00F7DF46 /* LoginViewModel.swift */; };
 		A8DF629C2B0BFFB800F7DF46 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF629B2B0BFFB800F7DF46 /* RegistrationViewModel.swift */; };
+		A8DF629F2B0C365D00F7DF46 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A8DF629E2B0C365D00F7DF46 /* FirebaseAuth */; };
+		A8DF62A32B0C36A100F7DF46 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A8DF62A22B0C36A100F7DF46 /* FirebaseDatabaseSwift */; };
+		A8DF62A52B0C36A800F7DF46 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A8DF62A42B0C36A800F7DF46 /* FirebaseStorage */; };
+		A8DF62A72B0C36BD00F7DF46 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A8DF62A62B0C36BD00F7DF46 /* FirebaseFirestore */; };
+		A8DF62A92B0C424500F7DF46 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF62A82B0C424500F7DF46 /* ContentViewModel.swift */; };
 		A8E8A0F92B07316800EAB34D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E8A0F82B07316800EAB34D /* LoginView.swift */; };
 		A8E8A0FC2B07318B00EAB34D /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E8A0FB2B07318B00EAB34D /* RegistrationView.swift */; };
 		A8FB19F12B00550900C47E09 /* TikTokTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB19F02B00550900C47E09 /* TikTokTutorialApp.swift */; };
@@ -46,6 +51,7 @@
 		A8DF62972B0B243700F7DF46 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A8DF62992B0B264B00F7DF46 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A8DF629B2B0BFFB800F7DF46 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		A8DF62A82B0C424500F7DF46 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		A8E8A0F82B07316800EAB34D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A8E8A0FB2B07318B00EAB34D /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		A8FB19ED2B00550900C47E09 /* TikTokTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +82,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DF62A32B0C36A100F7DF46 /* FirebaseDatabaseSwift in Frameworks */,
 				A8FB1A3B2B031ABA00C47E09 /* FirebaseAnalyticsSwift in Frameworks */,
+				A8DF62A52B0C36A800F7DF46 /* FirebaseStorage in Frameworks */,
+				A8DF62A72B0C36BD00F7DF46 /* FirebaseFirestore in Frameworks */,
+				A8DF629F2B0C365D00F7DF46 /* FirebaseAuth in Frameworks */,
 				A8FB1A372B031ABA00C47E09 /* FirebaseAnalytics in Frameworks */,
 				A8FB1A392B031ABA00C47E09 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				A8FB1A3F2B031ABA00C47E09 /* FirebaseAppCheck in Frameworks */,
@@ -87,6 +97,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8DF629D2B0C365D00F7DF46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A8E8A0F32B07312300EAB34D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +150,7 @@
 			children = (
 				A8FB19EF2B00550900C47E09 /* TikTokTutorial */,
 				A8FB19EE2B00550900C47E09 /* Products */,
+				A8DF629D2B0C365D00F7DF46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				A8FB19F22B00550900C47E09 /* ContentView.swift */,
+				A8DF62A82B0C424500F7DF46 /* ContentViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -375,6 +394,10 @@
 				A8FB1A3A2B031ABA00C47E09 /* FirebaseAnalyticsSwift */,
 				A8FB1A3C2B031ABA00C47E09 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				A8FB1A3E2B031ABA00C47E09 /* FirebaseAppCheck */,
+				A8DF629E2B0C365D00F7DF46 /* FirebaseAuth */,
+				A8DF62A22B0C36A100F7DF46 /* FirebaseDatabaseSwift */,
+				A8DF62A42B0C36A800F7DF46 /* FirebaseStorage */,
+				A8DF62A62B0C36BD00F7DF46 /* FirebaseFirestore */,
 			);
 			productName = TikTokTutorial;
 			productReference = A8FB19ED2B00550900C47E09 /* TikTokTutorial.app */;
@@ -442,6 +465,7 @@
 				A8FB1A152B009DFC00C47E09 /* FeedCell.swift in Sources */,
 				A8DF62942B0734F500F7DF46 /* StandardTextFieldModifier.swift in Sources */,
 				A8DF62982B0B243800F7DF46 /* AuthService.swift in Sources */,
+				A8DF62A92B0C424500F7DF46 /* ContentViewModel.swift in Sources */,
 				A8FB1A292B0154EB00C47E09 /* UserStatView.swift in Sources */,
 				A8FB19F32B00550900C47E09 /* ContentView.swift in Sources */,
 				A8FB1A302B01626200C47E09 /* FeedViewModel.swift in Sources */,
@@ -688,6 +712,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A8DF629E2B0C365D00F7DF46 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8FB1A352B031ABA00C47E09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A8DF62A22B0C36A100F7DF46 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8FB1A352B031ABA00C47E09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		A8DF62A42B0C36A800F7DF46 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8FB1A352B031ABA00C47E09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		A8DF62A62B0C36BD00F7DF46 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8FB1A352B031ABA00C47E09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		A8FB1A362B031ABA00C47E09 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A8FB1A352B031ABA00C47E09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

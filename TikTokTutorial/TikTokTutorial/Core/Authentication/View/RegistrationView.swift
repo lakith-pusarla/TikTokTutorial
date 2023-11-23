@@ -66,8 +66,8 @@ struct RegistrationView: View {
             }
             
             .padding(.vertical)
-//            .disabled(!formIsValid)
-//            .opacity(formIsValid ? 1 : 0.7)
+            .disabled(!formIsValid)
+            .opacity(formIsValid ? 1 : 0.5)
             Spacer()
             
             Divider()
