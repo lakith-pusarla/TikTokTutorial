@@ -104,19 +104,20 @@ struct FeedCell: View {
             // Experiment
             
         }
-//        .onTapGesture {
-//            switch player.timeControlStatus {
-//            case .paused:
-//                player.isMuted = true
-//            case .waitingToPlayAtSpecifiedRate:
-//                break
-//            case .playing:
-//                player.isMuted = false
-//            @unknown default:
-//                break
         .onTapGesture {
-            isMuted.toggle()
-            player.isMuted = isMuted
+            switch player.timeControlStatus {
+            case .paused:
+                player.play()
+            case .waitingToPlayAtSpecifiedRate:
+                break
+            case .playing:
+                player.pause()
+            @unknown default:
+                break
+            }
+//        .onTapGesture {
+//            isMuted.toggle()
+//            player.isMuted = isMuted
             
 //            switch isMuted {
 //            case true:

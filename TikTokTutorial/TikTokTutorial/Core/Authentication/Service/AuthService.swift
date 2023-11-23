@@ -36,6 +36,7 @@ class AuthService{
     }
     
     func signout(){
-        
+        try? Auth.auth().signOut() // user is signed out on backend
+        self.userSession = nil // update routing logic by clearing user session
     }
 }

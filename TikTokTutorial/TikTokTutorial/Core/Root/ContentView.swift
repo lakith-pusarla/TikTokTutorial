@@ -10,10 +10,14 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var viewModel = ContentViewModel(authService: AuthService())
+    private let authService: AuthService
+    init(authService: AuthService){
+        self.authService = authService
+    }
     var body: some View {
         Group{
             if viewModel.userSession != nil {
-                MainTabView()
+                MainTabView(authService: authService)
             } else {
                 LoginView()
             }
@@ -22,5 +26,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(authService: AuthService())
 }
