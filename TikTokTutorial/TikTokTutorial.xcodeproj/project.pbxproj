@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A82E68F22B196EBE00533299 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E68F12B196EBE00533299 /* User.swift */; };
 		A8DF62942B0734F500F7DF46 /* StandardTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF62932B0734F500F7DF46 /* StandardTextFieldModifier.swift */; };
 		A8DF62962B087E5D00F7DF46 /* AuthenticationFormProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF62952B087E5D00F7DF46 /* AuthenticationFormProtocol.swift */; };
 		A8DF62982B0B243800F7DF46 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF62972B0B243700F7DF46 /* AuthService.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A82E68F12B196EBE00533299 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A8DF62932B0734F500F7DF46 /* StandardTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTextFieldModifier.swift; sourceTree = "<group>"; };
 		A8DF62952B087E5D00F7DF46 /* AuthenticationFormProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFormProtocol.swift; sourceTree = "<group>"; };
 		A8DF62972B0B243700F7DF46 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				A8FB1A2A2B01620600C47E09 /* Post.swift */,
+				A82E68F12B196EBE00533299 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				A8FB1A132B007E4400C47E09 /* FeedView.swift in Sources */,
 				A8FB1A322B0181E700C47E09 /* CustomVideoPlayer.swift in Sources */,
 				A8DF629A2B0B264B00F7DF46 /* LoginViewModel.swift in Sources */,
+				A82E68F22B196EBE00533299 /* User.swift in Sources */,
 				A8FB1A212B01520800C47E09 /* ProfileHeaderView.swift in Sources */,
 				A8E8A0FC2B07318B00EAB34D /* RegistrationView.swift in Sources */,
 				A8FB1A152B009DFC00C47E09 /* FeedCell.swift in Sources */,

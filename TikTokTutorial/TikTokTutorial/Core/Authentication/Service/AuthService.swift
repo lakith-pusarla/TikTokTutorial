@@ -8,6 +8,7 @@
 import Firebase
 import FirebaseAuth
 
+@MainActor
 class AuthService{
     // Login view and Registration view can authenticate a user
     // Content view needs AuthService to check if user has logged in or not

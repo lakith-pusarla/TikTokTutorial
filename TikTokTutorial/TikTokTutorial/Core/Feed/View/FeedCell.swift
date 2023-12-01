@@ -115,19 +115,24 @@ struct FeedCell: View {
             @unknown default:
                 break
             }
-//        .onTapGesture {
-//            isMuted.toggle()
-//            player.isMuted = isMuted
+
+        }
+        .onAppear(){
+            player.play()
+        }
+        .onDisappear(){
+//            switch player.timeControlStatus{
+//            case .paused:
+//                player.play()
+//            case .playing:
+//                player.pause()
+//            case .waitingToPlayAtSpecifiedRate:
+//                break
+//            @unknown default:
+//                break
+            player.pause()
+//            }
             
-//            switch isMuted {
-//            case true:
-//                isMuted = false
-//                player.isMuted = false
-//
-//
-//            case false:
-//                isMuted = true
-//                player.isMuted = true
         }
                 
     }
