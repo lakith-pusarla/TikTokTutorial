@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct CurrentProfileUserView: View {
+    
+    let authService: AuthService
+    
     var body: some View {
         NavigationStack{
             ScrollView{
@@ -23,11 +27,22 @@ struct CurrentProfileUserView: View {
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing){
+                    Button("Sign Out") {
+                        authService.signout()
+                        print("DEBUG: Signout called")
+                    }
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    
+                }
+            }
         }
         
     }
 }
 
 #Preview {
-    CurrentProfileUserView()
+    CurrentProfileUserView(authService: AuthService())
 }

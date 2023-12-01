@@ -13,8 +13,13 @@ struct RegistrationView: View {
     @State private var fullname = ""
     @State private var username = ""
     @Environment(\.dismiss) var dismiss
-    @StateObject var viewModel =  RegistrationViewModel(authService: AuthService())
-    
+    @StateObject var viewModel: RegistrationViewModel
+    private let authService: AuthService
+    init(authService: AuthService){
+        self.authService = authService
+        
+        self._viewModel = StateObject(wrappedValue: RegistrationViewModel(authService: authService))
+    }
     var body: some View {
         VStack{
             Spacer()
@@ -67,8 +72,7 @@ struct RegistrationView: View {
             
             .padding(.vertical)
             .disabled(!formIsValid)
-            .opacity(formIsValid ? 1 : 0.7)
-
+            .opacity(formIsValid ? 1 : 0.5)
             Spacer()
             
             Divider()
@@ -109,5 +113,5 @@ extension RegistrationView: AuthenticationFormProtocol{
 }
 
 #Preview {
-    RegistrationView()
+    RegistrationView(authService: AuthService())
 }

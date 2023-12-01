@@ -104,29 +104,35 @@ struct FeedCell: View {
             // Experiment
             
         }
-//        .onTapGesture {
-//            switch player.timeControlStatus {
+        .onTapGesture {
+            switch player.timeControlStatus {
+            case .paused:
+                player.play()
+            case .waitingToPlayAtSpecifiedRate:
+                break
+            case .playing:
+                player.pause()
+            @unknown default:
+                break
+            }
+
+        }
+        .onAppear(){
+            player.play()
+        }
+        .onDisappear(){
+//            switch player.timeControlStatus{
 //            case .paused:
-//                player.isMuted = true
+//                player.play()
+//            case .playing:
+//                player.pause()
 //            case .waitingToPlayAtSpecifiedRate:
 //                break
-//            case .playing:
-//                player.isMuted = false
 //            @unknown default:
 //                break
-        .onTapGesture {
-            isMuted.toggle()
-            player.isMuted = isMuted
+            player.pause()
+//            }
             
-//            switch isMuted {
-//            case true:
-//                isMuted = false
-//                player.isMuted = false
-//
-//
-//            case false:
-//                isMuted = true
-//                player.isMuted = true
         }
                 
     }
